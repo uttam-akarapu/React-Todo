@@ -76,9 +76,20 @@ class App extends Component {
         <header className="header">React todo app</header>
         
         {notes}
- 
 
-	<p> Application code </p>
+ 	<div className="btn" onClick={this.addNote}>+</div>
+        <input type="text" 
+        ref={(input)=>{this.textInput = input}} 
+        value={this.state.noteText} 
+        className="textInput"
+        onChange={e=>this.updateText(e)}
+        onKeyPress={this.handleKeyPress}
+        />
+
+
+<hr/>
+
+<p> Application code </p>
 
 	 <pre><code>
                 {`
@@ -185,22 +196,6 @@ export default App;
                 `}
 
                 </code></pre>
-
-
-
-
-
-        
-
-
-        <div className="btn" onClick={this.addNote}>+</div>
-        <input type="text" 
-        ref={(input)=>{this.textInput = input}} 
-        value={this.state.noteText} 
-        className="textInput"
-        onChange={e=>this.updateText(e)}
-        onKeyPress={this.handleKeyPress}
-        />
 
       </div>
     );
