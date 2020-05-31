@@ -12,7 +12,7 @@ class Notes extends Component {
     render() {
         return (
             <div className="note" onClick={this.props.deleteNote}>
-                {this.props.text}
+                {this.props.text} - <span><i>Click to delete this entry</i></span>
             </div>
         );
     }

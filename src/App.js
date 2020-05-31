@@ -84,6 +84,7 @@ class App extends Component {
         className="textInput"
         onChange={e=>this.updateText(e)}
         onKeyPress={this.handleKeyPress}
+	placeholder="Start Typing "
         />
 
 
